@@ -1,0 +1,18 @@
+{
+  "name": "model",
+  "repo": "https://github.com/mvbjs/model",
+  "description": "Plain old JavaScript model using ES5 properties and could be used as reactive context.",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "mvbjs-observable": "*",
+    "mvbjs-validator": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "scripts": [
+    "index.js"
+  ],
+  "paths": [".."],
+  "local": ["observer", "validator"]
+}

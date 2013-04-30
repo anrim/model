@@ -1,0 +1,26 @@
+{
+  "name": "anrim-model",
+  "version": "0.0.1",
+  "description": "Model framework",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": "https://github.com/anrim/model",
+  "keywords": [
+    "model"
+  ],
+  "author": "anrim",
+  "license": "MIT",
+  "dependencies": {
+    "anrim-observable": "~0.0.1",
+    "anrim-validator": "~0.0.1",
+    "array.js": "~0.2.0"
+  },
+  "devDependencies": {
+    "should": "~1.2.2"
+  }
+}
