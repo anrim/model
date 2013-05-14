@@ -56,7 +56,25 @@ describe('Model', function(){
         var user = User.create();
       }, ValidationError);
     })
-  })
+    
+    it('should clone default array', function () {
+      var Address = Model()
+        .property("address", {required: true})
+        
+      var User = Model()
+        .property('name', {required: true})
+        .property('addresses', {type: "array", value: []});
+      
+      var user1 = User.create({name: 'user1'});
+      user1.addresses.push({address: "email@server.com"});
+      assert(user1.hasOwnProperty('addresses'));
+      assert.equal(user1.addresses.length, 1);
+      
+      var user2 = User.create({name: 'user2'});
+      assert.notStrictEqual(user1.addresses, user2.addresses);
+      assert.equal(user2.addresses.length, 0);
+    });
+  });
   
   describe('property', function (){
     it('should set type to "string" as default', function(){
